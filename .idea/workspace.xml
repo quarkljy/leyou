@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1WFRHM0J7QY64XOgHObvDZZuwId" />
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunManager" selected="Spring Boot.LyOrderApplication">
+    <configuration name="LyAuthApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="ly-auth-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.leyou.LyAuthApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LyCartApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="ly-cart" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.leyou.LyCartApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LyGateway" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="ly-gateway" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.leyou.gateway.LyGateway" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LyItemApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="ly-item-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.leyou.LyItemApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LyOrderApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="ly-order" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.leyou.LyOrderApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LyPageApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="ly-page" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.leyou.LyPageApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LyRegistry" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="ly-registry" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.leyou.LyRegistry" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LySearchApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="ly-search" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.leyou.LySearchApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LySmsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="ly-sms" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.leyou.LySmsApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LyUploadApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="ly-upload" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.leyou.LyUploadApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LyUserApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="ly-user-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.leyou.LyUserApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="549" y="153" key="FileChooserDialogImpl" timestamp="1578743339052">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="153" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1578743339052" />
+  </component>
+</project>

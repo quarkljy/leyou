@@ -1,0 +1,28 @@
+spring:
+  data:
+    elasticsearch:
+      cluster-name: elasticsearch
+      cluster-nodes: 106.52.114.205:9300
+      repositories:
+        enabled: true
+  jackson:
+    default-property-inclusion: non_null
+
+
+  rabbitmq:
+    host: 106.52.114.205
+    username: quark
+    password: i_am_quark_2019
+    virtual-host: /quark
+    port: 5672
+eureka:
+  client:
+    service-url:
+      defaultZone: http://106.52.114.205:10086/eureka
+    registry-fetch-interval-seconds: 5
+ribbon:
+  ConnectTimeout: 1000 # 连接超时时间(ms)
+  ReadTimeout: 3500 # 读取超时时间(ms)
+  MaxAutoRetriesNextServer: 3 # 同一服务不同实例的重试次数
+  MaxAutoRetries: 3 # 同一实例的重试次数
+

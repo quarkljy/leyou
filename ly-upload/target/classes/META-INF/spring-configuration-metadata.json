@@ -1,0 +1,42 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "com.leyou.upload.configure.AliyunOss",
+      "name": "ly.upload",
+      "type": "com.leyou.upload.configure.AliyunOss"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "com.leyou.upload.configure.AliyunOss",
+      "name": "ly.upload.access-key-id",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.leyou.upload.configure.AliyunOss",
+      "name": "ly.upload.access-key-secret",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.leyou.upload.configure.AliyunOss",
+      "name": "ly.upload.allow-types",
+      "type": "java.util.List<java.lang.String>"
+    },
+    {
+      "sourceType": "com.leyou.upload.configure.AliyunOss",
+      "name": "ly.upload.base-url",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.leyou.upload.configure.AliyunOss",
+      "name": "ly.upload.bucket-name",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.leyou.upload.configure.AliyunOss",
+      "name": "ly.upload.endpoint",
+      "type": "java.lang.String"
+    }
+  ]
+}

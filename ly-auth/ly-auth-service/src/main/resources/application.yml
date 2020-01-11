@@ -1,0 +1,20 @@
+server:
+  port: 8087
+spring:
+  application:
+    name: auth-service #要在这里放应用名字
+  profiles:
+    active: dev
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://127.0.0.1:10086/eureka
+#    registry-fetch-interval-seconds: 5
+#
+#ly:
+#  jwt:
+#    secret: ly@Login(Auth}*^31)&yun6%f3q2 # 登录校验的密钥
+#    pubKeyPath: F:\quark\rsa\rsa.pub # 公钥地址  注意地址的写法
+#    priKeyPath: F:\quark\rsa\rsa.pri # 私钥地址
+#    expire: 30 # 过期时间,单位分钟
+#    cookieName: LY_TOKEN

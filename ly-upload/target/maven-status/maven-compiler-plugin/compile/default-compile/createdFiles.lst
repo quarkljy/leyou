@@ -1,0 +1,5 @@
+com\leyou\upload\service\UploadService.class
+com\leyou\upload\controller\UploadController.class
+com\leyou\LyUploadApplication.class
+META-INF\spring-configuration-metadata.json
+com\leyou\upload\configure\AliyunOss.class

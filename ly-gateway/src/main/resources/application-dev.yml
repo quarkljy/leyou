@@ -1,0 +1,44 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:10086/eureka
+    registry-fetch-interval-seconds: 5
+zuul:
+  prefix: /api
+  routes:
+    item-service: /item/**
+    search-service: /search/**
+    user-service: /user/**
+    auth-service: /auth/**
+    cart-service: /cart/**
+    order-service: /order/**
+  add-host-header: true # 添加host头信息
+  sensitive-headers:
+  ignored-services:
+    - upload-service
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMillisecond: 10000 # 熔断超时时长：10000ms
+ribbon:
+  ConnectTimeout: 1000 # 连接超时时间(ms)
+  ReadTimeout: 3500 # 读取超时时间(ms)
+  MaxAutoRetriesNextServer: 0 # 同一服务不同实例的重试次数
+  MaxAutoRetries: 0 # 同一实例的重试次数
+ly:
+  jwt:
+    pubKeyPath: /quark/rsa/rsa.pub # 公钥地址  注意地址的写法
+
+#    pubKeyPath: F:\quark\rsa\rsa.pub # 公钥地址
+    cookieName: LY_TOKEN
+  filter:
+    allowPaths:
+    - /api/auth
+    - /api/search
+    - /api/user/register
+    - /api/user/check
+    - /api/user/code
+    - /api/item

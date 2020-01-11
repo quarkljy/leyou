@@ -1,0 +1,7 @@
+server:
+  port: 8086
+spring:
+  application:
+    name: sms-service
+  profiles:
+    active: dev

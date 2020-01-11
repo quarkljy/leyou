@@ -1,0 +1,15 @@
+spring:
+  thymeleaf:
+    cache: false
+  rabbitmq:
+    host: rabbit
+    username: quark
+    password: i_am_quark_2019
+    virtual-host: /quark
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka:10086/eureka
+
+page:
+  path: /quark/nginx/html/item

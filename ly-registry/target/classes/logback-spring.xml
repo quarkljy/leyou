@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<configuration debug="false">
+    <!--从springboot 的application.yml 文件里获取项目名字，比如当前日志项目的名字是 spring_quark_log --> 
+    <springProperty scope="context" name="APP_NAME" source="spring.application.name"/>
+    <!--    从springboot 的application.yml 文件里获取项目端口，比如当前日志项目的名字是 8090 -->
+    <springProperty scope="context" name="APP_PORT" source="server.port"/>
+       
+    <!-- xml文件的变量 ,name是变量名,value是他的值,下面的需要引用 就只需要 ${变量名: -默认值}   没有值就会使用默认值        -->
+    <!-- 没有盘符就是当前项目所在的盘符 E:\\log\spring_quark_log-8091-->           
+    <property name="DEV-LOG_PATH" value="/dev/spring-logs"/>
+    <!-- 没有盘符就是当前项目所在的盘符 F:\spring-logs\spring_quark_log-8091-->           
+    <property name="PROD-LOG_PATH" value="/prod/spring-logs"/>
+    <property name="TEST-LOG_PATH" value="/test/spring-logs"/>
+     
+    <!-- 控制台输出 --> 
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">       
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">           
+            <!--格式化输出：%d表示日期，%thread表示线程名，%-5level：级别从左显示5个字符宽度，%msg：日志消息，%n是换行符 -->     
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50} - %msg%n</pattern>
+                   
+        </encoder>
+           
+    </appender>
+       
+    <!-- dev  按照每天生成日志文件 -->    
+    <appender name="FILE-DEV" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <!-- 只要info warn error 级别的日志-->                
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">           
+            <!--日志文件输出的文件名 -->            
+            <FileNamePattern>${DEV-LOG_PATH}/${APP_NAME}-${APP_PORT}/dev.log.%d{yyyy-MM-dd}-%i.log</FileNamePattern>
+                       
+            <!--日志文件保留天数 -->            
+            <MaxHistory>30</MaxHistory>
+            <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>100MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+                   
+        </rollingPolicy>
+               
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">           
+            <!--格式化输出：%d表示日期，%thread表示线程名，%-5level：级别从左显示5个字符宽度%msg：日志消息，%n是换行符 -->            
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50} - %msg%n</pattern>
+                   
+        </encoder>
+           
+    </appender>
+       
+    <!-- TEST  按照每天生成日志文件 -->
+    <appender name="FILE-TEST" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <!-- 只要info warn error 级别的日志-->                
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">           
+            <!--日志文件输出的文件名 -->            
+            <FileNamePattern>${TEST-LOG_PATH}/${APP_NAME}-${APP_PORT}/test.log.%d{yyyy-MM-dd}-%i.log</FileNamePattern>
+                       
+            <!--日志文件保留天数 -->            
+            <MaxHistory>30</MaxHistory>
+            <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>10KB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+                   
+        </rollingPolicy>
+               
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">           
+            <!--格式化输出：%d表示日期，%thread表示线程名，%-5level：级别从左显示5个字符宽度%msg：日志消息，%n是换行符 -->            
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50} - %msg%n</pattern>
+                   
+        </encoder>
+           
+    </appender>
+     
+    <!-- prod  按照每天生成日志文件 -->    
+    <appender name="FILE-PROD" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <!--只要warn error 级别的日志-->      
+        <!-- 此日志文档只记录info级别的 -->
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>error</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+               
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">           
+            <!--日志文件输出的文件名 -->         
+            <FileNamePattern>${PROD-LOG_PATH}/${APP_NAME}-${APP_PORT}/prod.log.%d{yyyy-MM-dd}-%i.log</FileNamePattern> 
+                     
+            <!--日志文件保留天数 -->     
+            <MaxHistory>30</MaxHistory>
+            <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>100MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+                   
+        </rollingPolicy>
+               
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">           
+            <!--格式化输出：%d表示日期，%thread表示线程名，%-5level：级别从左显示5个字符宽度%msg：日志消息，%n是换行符 -->     
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50} - %msg%n</pattern>
+                   
+        </encoder>
+           
+    </appender>
+    <springProfile name="prod">
+        <!--
+            root与logger是父子关系，没有特别定义则默认为root，任何一个类只会和一个logger对应，
+            要么是定义的logger，要么是root，判断的关键在于找到这个logger，然后判断这个logger的appender和level。
+            -->
+        <root level="info">
+            <appender-ref ref="FILE-PROD"/>
+            <!-- 注销之后，console不输出-->
+            <!-- <appender-ref ref="CONSOLE" />-->
+        </root>
+    </springProfile>
+    <springProfile name="dev">
+        <root level="INFO">
+            <appender-ref ref="FILE-DEV"/>
+            <appender-ref ref="CONSOLE"/>
+        </root>
+    </springProfile>
+    <springProfile name="test">
+        <root level="debug">
+            <appender-ref ref="FILE-TEST"/>
+            <appender-ref ref="CONSOLE"/>
+        </root>
+    </springProfile>
+</configuration>

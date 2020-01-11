@@ -1,0 +1,17 @@
+spring:
+  rabbitmq:
+    host: rabbit
+    username: quark
+    password: i_am_quark_2019
+    virtual-host: /quark
+    port: 5672
+  redis:
+    host: redisdb
+    port: 6379
+    password: i_am_quark_2019
+ly:
+  sms:
+    accessKeyId: LTAIfBy2qBIH4ct0
+    accessKeySecret: gtV32ZyTtzTnHzaAZq5Hi06V4TUHD5
+    signName: 乐优商城
+    verifyCodeTemplate: SMS_170842810
