@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f2e0f2cb-652b-4904-bba1-6a9a4d539b82" name="Default Changelist" comment=" fix bug">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ly-page/src/main/resources/templates/item.html" beforeDir="false" afterPath="$PROJECT_DIR$/ly-page/src/main/resources/templates/item.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ly-gateway/src/main/java/com/leyou/gateway/config/GlobalCorsConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/ly-gateway/src/main/java/com/leyou/gateway/config/GlobalCorsConfig.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,7 +143,7 @@
       <updated>1578743268660</updated>
       <workItem from="1578743284478" duration="532000" />
       <workItem from="1578745025991" duration="355000" />
-      <workItem from="1578826223192" duration="2023000" />
+      <workItem from="1578826223192" duration="2276000" />
     </task>
     <task id="LOCAL-00001" summary=" fix bug">
       <created>1578743694100</created>
@@ -161,7 +159,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578745242360</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary=" fix bug">
+      <created>1578828935928</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1578828935928</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -172,19 +177,19 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value=" fix bug" />
     <MESSAGE value="修复详情页的js等的相对地址" />
-    <option name="LAST_COMMIT_MESSAGE" value="修复详情页的js等的相对地址" />
+    <MESSAGE value=" fix bug" />
+    <option name="LAST_COMMIT_MESSAGE" value=" fix bug" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="221" y="9" key="CommitChangelistDialog2" timestamp="1578745268983">
+    <state x="221" y="9" key="CommitChangelistDialog2" timestamp="1578828932320">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="221" y="9" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1578745268983" />
-    <state x="0" y="72" key="DiffContextDialog" timestamp="1578745266684">
+    <state x="221" y="9" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1578828932320" />
+    <state x="0" y="72" width="1536" height="683" key="DiffContextDialog" timestamp="1578828921554">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="0" y="72" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1578745266684" />
+    <state x="0" y="72" width="1536" height="683" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1578828921554" />
     <state x="549" y="153" key="FileChooserDialogImpl" timestamp="1578743339052">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -193,22 +198,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="644" y="303" width="272" height="218" key="Github.ShareDialog/0.0.1536.824@0.0.1536.824" timestamp="1578743736068" />
-    <state width="1493" height="121" key="GridCell.Tab.0.bottom" timestamp="1578828831421">
+    <state width="1493" height="121" key="GridCell.Tab.0.bottom" timestamp="1578828942687">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="121" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1578828831421" />
-    <state width="1493" height="121" key="GridCell.Tab.0.center" timestamp="1578828831421">
+    <state width="1493" height="121" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1578828942687" />
+    <state width="1493" height="121" key="GridCell.Tab.0.center" timestamp="1578828942687">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="121" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1578828831421" />
-    <state width="1493" height="121" key="GridCell.Tab.0.left" timestamp="1578828831421">
+    <state width="1493" height="121" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1578828942687" />
+    <state width="1493" height="121" key="GridCell.Tab.0.left" timestamp="1578828942687">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="121" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1578828831421" />
-    <state width="1493" height="121" key="GridCell.Tab.0.right" timestamp="1578828831421">
+    <state width="1493" height="121" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1578828942687" />
+    <state width="1493" height="121" key="GridCell.Tab.0.right" timestamp="1578828942687">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="121" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1578828831421" />
+    <state width="1493" height="121" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1578828942687" />
     <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1578745287471">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

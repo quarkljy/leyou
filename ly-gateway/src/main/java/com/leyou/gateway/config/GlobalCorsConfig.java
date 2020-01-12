@@ -13,7 +13,6 @@ public class GlobalCorsConfig {
     public CorsFilter corsFilter() {
         CorsConfiguration config = new CorsConfiguration();
         config.addAllowedOrigin("http://manage.leyou.com");
-        config.addAllowedOrigin("http://www.leyou.com");
         config.addAllowedOrigin("http://api.leyou.com");
         config.addAllowedOrigin("http://106.52.114.205");
         config.addAllowedOrigin("http://127.0.0.1");
